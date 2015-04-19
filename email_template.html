@@ -1,0 +1,36 @@
+  <html>
+  <head><meta charset='utf-8'></head>
+  <body>
+    <img src="https://c2.staticflickr.com/4/3023/2700903345_dbe3af5b5d_b.jpg" align="right" width="143" height="150" style="margin-left: 10px;">
+    <p><strong>Hey <%= firstName %></strong>,</p>
+    <p>
+      How are you doing?  I can't believe it's been almost <%= numMonthsSinceContact %> months
+    since we last talked.  We need to do a better job of keeping in touch!  
+    </p>
+
+    <p>
+      After a string of successful web and creative projects, this summer I'm learning to code full-time at Fullstack Academy and immersing myself in startup culture to take my skills and career goals to the next level. I have been writing about my experiences on my blog. Join me on this exciting new venture!<br>Check out my full blog here:
+      <ul>
+        <li><a href="http://mowglicodes.tumblr.com">mowgliCodes Blog</a></li>
+      </ul>
+      Or see my posts within the last week below: 
+      <ul>
+        <% for(var i=0; i<latestPosts.length; i++) {%>
+           <li><a href=<%= latestPosts[i].href %>> <%= latestPosts[i].title %></a>  </li>
+        <% } %>
+      </ul>
+       Also I'd love it if you knew what I've been up to during the last few years so I made an online portfolio detailing the different research, music, and web projects I have been working on.<br>
+       Check it out here:
+      <ul>
+        <li><a href="jungleej.wordpress.com">Siddharth Joshi Online Portfolio</a></li>
+      </ul>
+    </p>
+    <p>
+      I'm in NYC for the summer.  Let's connect!<br><br>
+      <strong>Take care,<br>
+      Siddharth<br>
+      978-758-7251<br>
+      drumfiend21@gmail.com</strong>
+    </p>
+  </body>
+  </html>
