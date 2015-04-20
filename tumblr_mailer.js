@@ -7,29 +7,6 @@ var mandrill_client = new mandrill.Mandrill('xxxx');
 var csvFile = fs.readFileSync("friend_list.csv","utf8");
 var emailTemplate = fs.readFileSync('email_template.html', 'utf8');
 
-
-//create loop function that takes "split at" and an array to push to
-//intakes a string, splits at each \n, stores all data in an array
-//create object constructor
-//object constructor takes elements of first line (array[0]) as key values
-//object constructor intakes each line, splits at commas and stores in a new array
-//split our csvFile (string) at new lines, store each line as item in newlineArray
-//split our first line at commas, store each element as a key name in keysArray
-//split each contact, stored as an item in the newlineArray, at the commas and
-//store each contact as an item 
-
-//Log
-//1. splits string and stores in newline array
-//2. Splits newlineArray[0] into keysArray
-//3. Splits newlineArray lines at commas and stores all values
-//   for each contact as items in its own array in contactsArray
-//   ie. contactsArray[0][0] = "Scott"
-//4. contactsSplit creates objects for each contact in contactsArray, 
-//   setting keys to items in each contact and storing each contact object
-//   in arrayofObjectContacts
-
-
-
 var csvParse = function(string){
 	var arrayofObjects=[];
 	var arr = string.split("\n");
