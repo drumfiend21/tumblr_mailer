@@ -2,7 +2,7 @@ var fs = require('fs');
 var ejs = require('ejs');
 var tumblr = require('tumblr.js');
 var mandrill = require('mandrill-api/mandrill');
-var mandrill_client = new mandrill.Mandrill('pNXtXXGsxAgaXgYZAG2FeQ');
+var mandrill_client = new mandrill.Mandrill('xxxx');
 
 var csvFile = fs.readFileSync("friend_list.csv","utf8");
 var emailTemplate = fs.readFileSync('email_template.html', 'utf8');
@@ -58,31 +58,11 @@ currentTime = new Date().getTime();
 var blogObj={};
 
 var client = tumblr.createClient({
-  consumer_key: 'mwkxzttaO6ra7tzIDMguRD4FtYsGTlXAgAIWs8qd8D0RvAnmxA',
-  consumer_secret: 'EmwtXys3hzq3UTfhhMDHaR1GWMQ8a660m0mHOXISnqe6389zjd',
-  token: 'AyHhKNIKbRbqlPdpUaxzzsaqnopUYukiz9pTqpbIBZRpRGsz8H',
-  token_secret: '7J5EfFffNFEdeE7dDEJXVSsEkvXTwypchWIdI6oVjJWBcznCPP'
+  consumer_key: 'xxxx',
+  consumer_secret: 'xxxx',
+  token: 'xxxx',
+  token_secret: 'xxxx'
 });
-
-/*
-
-	for(var i= 0; i < beeble["posts"].length; i++){
-		if(currentTime - Date.parse(beeble["posts"][i]["date"]) <= 604,800,000){
-			var newObj = {};
-			newObj.href = beeble["posts"][i]["short_url"];
-			newObj.title = beeble["posts"][i]["title"];
-			latestPosts.push(newObj);
-		}
-	}
-	console.log(latestPosts);
-
-
-
-*/
-
-
-
-
 
 
 //pull blog dates, select and push to latestPosts
@@ -160,57 +140,7 @@ client.posts('mowglicodes.tumblr.com', function(err, beeble){
 
 
 
-//HTML Email Generator
 
-/*
-friendList = csvParse(csvFile);
-
-friendList.forEach(function(row){
-
-    var firstName = row["firstName"];
-    var numMonthsSinceContact = row["numMonthsSinceContact"];
-*/
-    //blog posts
-
-    /*
-	var latestPosts = [
-
-	postOne={
-	href : "http://tinyurl.com/oornhsv",
-	title : "Old Roots New Shoots",
-
-	},
-	postTwo={
-	href : "http://tinyurl.com/tgitf",
-	title : "T.G.I.TF",
-
-	},
-	postThree={
-	href : "http://tinyurl.com/mowglicodes",
-	title : "prompt("+"whyMowgliCodes?"+")",
-	}
-	];
-	*/
-    // we make a copy of the emailTemplate variable to a new variable to ensure
-       // we don't edit the original template text since we'll need to us it for 
-       // multiple emails
-
-    //var templateCopy = emailTemplate;
-
-    // use .replace to replace FIRST_NAME and NUM_MONTHS_SINCE_CONTACT with firstName and  monthsSinceLastContact  
-    //templateCopy = templateCopy.replace(/FIRST_NAME/gi,
-    //firstName).replace(/NUM_MONTHS_SINCE_CONTACT/gi, numMonthsSinceContact);
-/*
-	var customizedTemplate = ejs.render(emailTemplate, {
-
-		firstName: firstName,
-		numMonthsSinceContact: numMonthsSinceContact,
-		latestPosts: latestPosts,
-
-	});
-    console.log(customizedTemplate);
-})
-*/
 
 
 
